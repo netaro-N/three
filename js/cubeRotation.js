@@ -14,7 +14,7 @@ scene.add( cube );
 */
 
 // 環境光を追加
-const ambientLight = new THREE.AmbientLight(0xFFFFFF, 0.5);
+const ambientLight = new THREE.AmbientLight(0x404040, 0.5);
 scene.add(ambientLight);
 
 // Collada 形式のモデルデータを読み込む
