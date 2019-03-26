@@ -14,25 +14,23 @@ scene.add( cube );
 */
 
 // 環境光を追加
-const ambientLight = new THREE.AmbientLight(0x404040, 0.5);
+const ambientLight = new THREE.AmbientLight(0xFFFFFF, 0.5);
 scene.add(ambientLight);
 
 // Collada 形式のモデルデータを読み込む
 const loader = new THREE.ColladaLoader();
 // dae ファイルのパスを指定
-loader.load('models/dae/circle.dae', (collada) => {
+loader.load('models/dae/snowman.dae', (collada) => {
     const model = collada.scene;
     scene.add(model); // 読み込み後に3D空間に追加
 });
 
 function animate() {
   requestAnimationFrame( animate );
-
-  /*
+/*
   cube.rotation.x += 0.01;
   cube.rotation.y += 0.01;
 */
-
   renderer.render( scene, camera );
 }
 animate();
