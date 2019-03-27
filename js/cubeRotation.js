@@ -22,8 +22,15 @@ const loader = new THREE.ColladaLoader();
 // dae ファイルのパスを指定
 loader.load('models/dae/untitled.dae', (collada) => {
     const model = collada.scene;
+    model.rotation.x += getRadian(30);
+    model.rotation.y += getRadian(10);
+    model.rotation.z += getRadian(-10);
     scene.add(model); // 読み込み後に3D空間に追加
 });
+
+function getRadian(kakudo) {
+    return kakudo * Math.PI / 180;
+}
 
 function animate() {
   requestAnimationFrame( animate );
