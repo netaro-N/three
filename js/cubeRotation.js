@@ -20,7 +20,7 @@ scene.add(ambientLight);
 // Collada 形式のモデルデータを読み込む
 const loader = new THREE.ColladaLoader();
 // dae ファイルのパスを指定
-loader.load('models/dae/snowman.dae', (collada) => {
+loader.load('models/dae/untitled.dae', (collada) => {
     const model = collada.scene;
     scene.add(model); // 読み込み後に3D空間に追加
 });
